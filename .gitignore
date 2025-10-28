@@ -33,6 +33,10 @@ logs/
 *.mobileprovision
 *.orig.*
 
+# Firebase
+google-services.json
+GoogleService-Info.plist
+
 # Testing
 coverage/
 .jest/
