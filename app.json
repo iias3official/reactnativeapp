@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "AstroWisdom",
+    "slug": "astrowisdom",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#FFF5F8"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.astrowisdom.app"
+    },
+    "android": {
+      "package": "com.astrowisdom.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#FFF5F8"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-font"
+    ]
+  }
+}
