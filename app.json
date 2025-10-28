@@ -11,17 +11,24 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.astrowisdom.app"
+      "bundleIdentifier": "com.lumora.astrowisdom"
     },
     "android": {
-      "package": "com.astrowisdom.app",
+      "package": "com.lumora.astrowisdom",
       "adaptiveIcon": {
         "backgroundColor": "#FFF5F8"
-      }
+      },
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "bundler": "metro"
     },
-    "plugins": ["expo-asset", "expo-font"]
+    "plugins": [
+      "expo-asset",
+      "expo-font",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/messaging"
+    ]
   }
 }
