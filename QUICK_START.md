@@ -147,15 +147,55 @@ npx expo start -c
 6. Open Astrologer Profile
 7. Test bottom tab navigation
 
+## 🔥 Firebase Setup (Optional)
+
+To enable authentication and push notifications:
+
+1. **Create Firebase Project**:
+   - Go to [Firebase Console](https://console.firebase.google.com/)
+   - Click "Add project" and follow the wizard
+   - Project name: `astrowisdom` or `astrowisdom-dev`
+
+2. **Enable Authentication**:
+   - Navigate to Authentication > Sign-in method
+   - Enable "Phone" and "Email/Password"
+   - Add test phone numbers for development
+
+3. **Get Configuration**:
+   - Project Settings > Your apps > Add app (iOS/Android/Web)
+   - Download config files:
+     - iOS: `GoogleService-Info.plist`
+     - Android: `google-services.json`
+   - Copy Firebase config values
+
+4. **Add to Environment**:
+   - Update `.env` file with Firebase credentials from step 3
+   - See `.env.example` for required fields
+
+5. **Detailed Instructions**:
+   - See `/docs/FIREBASE_SETUP.md` for complete guide
+   - Backend setup: `../astrowisdom-backend/docs/FIREBASE_SETUP.md`
+
 ## 🎉 What's Next?
 
-- [ ] Backend API with Node.js/Express
+**Backend Setup:**
+
+- [ ] Backend API with Node.js/Express → See `../astrowisdom-backend/`
 - [ ] Real-time chat with Socket.io
+- [ ] API contracts defined in OpenAPI spec
+
+**Native Features:**
+
 - [ ] Voice/Video calls with Agora SDK
-- [ ] Payment integration (Razorpay/Stripe)
-- [ ] Firebase authentication
-- [ ] Push notifications
+- [ ] Payment integration (Razorpay)
+- [ ] Firebase authentication & push notifications
+- [ ] See `/docs/NATIVE_SDK_STRATEGY.md` for implementation approach
+
+**Features:**
+
 - [ ] Kundli generation
 - [ ] Report purchases
+- [ ] Wallet recharge
+- [ ] Call scheduling
 
 Enjoy exploring AstroWisdom! ✨
