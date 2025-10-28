@@ -174,15 +174,9 @@ const AstrologerListScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/* Header */}
-      <LinearGradient
-        colors={[COLORS.primary, COLORS.primaryLight]}
-        style={styles.header}
-      >
+      <LinearGradient colors={[COLORS.primary, COLORS.primaryLight]} style={styles.header}>
         <View style={styles.headerTop}>
-          <TouchableOpacity
-            style={styles.backButton}
-            onPress={() => navigation.goBack()}
-          >
+          <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
             <Text style={styles.backButtonText}>←</Text>
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Astrologers</Text>
@@ -244,10 +238,7 @@ const AstrologerListScreen = ({ navigation }) => {
             onPress={() => setSortBy('rating')}
           >
             <Text
-              style={[
-                styles.sortButtonText,
-                sortBy === 'rating' && styles.sortButtonTextActive,
-              ]}
+              style={[styles.sortButtonText, sortBy === 'rating' && styles.sortButtonTextActive]}
             >
               Top Rated
             </Text>
@@ -257,10 +248,7 @@ const AstrologerListScreen = ({ navigation }) => {
             onPress={() => setSortBy('price')}
           >
             <Text
-              style={[
-                styles.sortButtonText,
-                sortBy === 'price' && styles.sortButtonTextActive,
-              ]}
+              style={[styles.sortButtonText, sortBy === 'price' && styles.sortButtonTextActive]}
             >
               Price
             </Text>

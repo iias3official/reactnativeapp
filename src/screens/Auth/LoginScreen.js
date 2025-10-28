@@ -35,15 +35,9 @@ const LoginScreen = ({ navigation }) => {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
     >
-      <ScrollView
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
+      <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         {/* Header with Gradient Background */}
-        <LinearGradient
-          colors={[COLORS.primary, COLORS.primaryLight]}
-          style={styles.header}
-        >
+        <LinearGradient colors={[COLORS.primary, COLORS.primaryLight]} style={styles.header}>
           <Text style={styles.headerEmoji}>🔮</Text>
           <Text style={styles.headerTitle}>Welcome Back</Text>
           <Text style={styles.headerSubtitle}>Sign in to continue your journey</Text>
@@ -100,9 +94,8 @@ const LoginScreen = ({ navigation }) => {
 
           {/* Terms and Privacy */}
           <Text style={styles.termsText}>
-            By continuing, you agree to our{' '}
-            <Text style={styles.termsLink}>Terms of Service</Text> and{' '}
-            <Text style={styles.termsLink}>Privacy Policy</Text>
+            By continuing, you agree to our <Text style={styles.termsLink}>Terms of Service</Text>{' '}
+            and <Text style={styles.termsLink}>Privacy Policy</Text>
           </Text>
 
           {/* Sign Up Link */}

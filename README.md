@@ -78,11 +78,13 @@ astrowisdom/
 ### Installation
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. Start the development server:
+
 ```bash
 npm start
 ```
@@ -96,6 +98,7 @@ npm start
 ## 📱 Screens Overview
 
 ### Authentication Flow
+
 - Onboarding (3 slides)
 - Login
 - Register
@@ -103,6 +106,7 @@ npm start
 - Profile Setup
 
 ### Main App
+
 - Home Dashboard
 - Horoscope
 - Astrologer List

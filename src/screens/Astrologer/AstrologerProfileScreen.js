@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  Dimensions,
-} from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Card from '../../components/Card';
 import Button from '../../components/Button';
@@ -60,14 +53,8 @@ const AstrologerProfileScreen = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
       {/* Header */}
-      <LinearGradient
-        colors={[COLORS.primary, COLORS.primaryLight]}
-        style={styles.header}
-      >
-        <TouchableOpacity
-          style={styles.backButton}
-          onPress={() => navigation.goBack()}
-        >
+      <LinearGradient colors={[COLORS.primary, COLORS.primaryLight]} style={styles.header}>
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
           <Text style={styles.backButtonText}>←</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.favoriteButton}>
@@ -85,17 +72,13 @@ const AstrologerProfileScreen = ({ navigation, route }) => {
           <View style={styles.profileHeader}>
             <View style={styles.avatarContainer}>
               <View style={styles.avatar}>
-                <Text style={styles.avatarText}>
-                  {astrologer?.name?.charAt(0) || 'A'}
-                </Text>
+                <Text style={styles.avatarText}>{astrologer?.name?.charAt(0) || 'A'}</Text>
               </View>
               <View
                 style={[
                   styles.onlineIndicator,
                   {
-                    backgroundColor: astrologer?.isOnline
-                      ? COLORS.online
-                      : COLORS.offline,
+                    backgroundColor: astrologer?.isOnline ? COLORS.online : COLORS.offline,
                   },
                 ]}
               />
@@ -118,9 +101,7 @@ const AstrologerProfileScreen = ({ navigation, route }) => {
                 </View>
                 <View style={styles.statDivider} />
                 <View style={styles.statItem}>
-                  <Text style={styles.statValue}>
-                    {astrologer?.consultations || '5420'}
-                  </Text>
+                  <Text style={styles.statValue}>{astrologer?.consultations || '5420'}</Text>
                   <Text style={styles.statLabel}>Consultations</Text>
                 </View>
                 <View style={styles.statDivider} />
@@ -150,9 +131,7 @@ const AstrologerProfileScreen = ({ navigation, route }) => {
           <TouchableOpacity style={styles.actionButtonSquare}>
             <Text style={styles.actionButtonIcon}>🎥</Text>
             <Text style={styles.actionButtonLabel}>Video</Text>
-            <Text style={styles.actionButtonPrice}>
-              ₹{(astrologer?.price || 25) + 10}/min
-            </Text>
+            <Text style={styles.actionButtonPrice}>₹{(astrologer?.price || 25) + 10}/min</Text>
           </TouchableOpacity>
         </View>
 
@@ -176,18 +155,10 @@ const AstrologerProfileScreen = ({ navigation, route }) => {
           {tabs.map((tab) => (
             <TouchableOpacity
               key={tab.id}
-              style={[
-                styles.tab,
-                selectedTab === tab.id && styles.tabActive,
-              ]}
+              style={[styles.tab, selectedTab === tab.id && styles.tabActive]}
               onPress={() => setSelectedTab(tab.id)}
             >
-              <Text
-                style={[
-                  styles.tabText,
-                  selectedTab === tab.id && styles.tabTextActive,
-                ]}
-              >
+              <Text style={[styles.tabText, selectedTab === tab.id && styles.tabTextActive]}>
                 {tab.label}
               </Text>
             </TouchableOpacity>
@@ -202,9 +173,9 @@ const AstrologerProfileScreen = ({ navigation, route }) => {
               <Text style={styles.contentText}>
                 {astrologer?.name || 'This astrologer'} is a highly experienced professional
                 specializing in {astrologer?.expertise || 'astrology'} with{' '}
-                {astrologer?.experience || '15 years'} of experience. Known for accurate
-                predictions and compassionate guidance, helping thousands of clients find
-                clarity and direction in their lives.
+                {astrologer?.experience || '15 years'} of experience. Known for accurate predictions
+                and compassionate guidance, helping thousands of clients find clarity and direction
+                in their lives.
               </Text>
             </Card>
 
@@ -224,9 +195,7 @@ const AstrologerProfileScreen = ({ navigation, route }) => {
                 <Text style={styles.achievementIcon}>🏆</Text>
                 <View style={styles.achievementContent}>
                   <Text style={styles.achievementTitle}>Awards & Recognition</Text>
-                  <Text style={styles.achievementText}>
-                    Best Astrologer Award 2023
-                  </Text>
+                  <Text style={styles.achievementText}>Best Astrologer Award 2023</Text>
                   <Text style={styles.achievementText}>
                     Featured in National Astrology Conference
                   </Text>
@@ -242,9 +211,7 @@ const AstrologerProfileScreen = ({ navigation, route }) => {
               <Card key={review.id} style={styles.reviewCard}>
                 <View style={styles.reviewHeader}>
                   <View style={styles.reviewAvatar}>
-                    <Text style={styles.reviewAvatarText}>
-                      {review.userName.charAt(0)}
-                    </Text>
+                    <Text style={styles.reviewAvatarText}>{review.userName.charAt(0)}</Text>
                   </View>
                   <View style={styles.reviewInfo}>
                     <Text style={styles.reviewUserName}>{review.userName}</Text>
@@ -272,10 +239,7 @@ const AstrologerProfileScreen = ({ navigation, route }) => {
       </ScrollView>
 
       {/* Bottom Action Bar */}
-      <LinearGradient
-        colors={[COLORS.background, COLORS.secondary]}
-        style={styles.bottomBar}
-      >
+      <LinearGradient colors={[COLORS.background, COLORS.secondary]} style={styles.bottomBar}>
         <View style={styles.priceInfo}>
           <Text style={styles.bottomPrice}>₹{astrologer?.price || '25'}/min</Text>
           <Text style={styles.bottomPriceLabel}>Starting price</Text>

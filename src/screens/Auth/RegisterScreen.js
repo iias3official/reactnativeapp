@@ -41,14 +41,8 @@ const RegisterScreen = ({ navigation }) => {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
     >
-      <ScrollView
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
-        <LinearGradient
-          colors={[COLORS.primary, COLORS.primaryLight]}
-          style={styles.header}
-        >
+      <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+        <LinearGradient colors={[COLORS.primary, COLORS.primaryLight]} style={styles.header}>
           <Text style={styles.headerEmoji}>✨</Text>
           <Text style={styles.headerTitle}>Create Account</Text>
           <Text style={styles.headerSubtitle}>Join us and discover your destiny</Text>
@@ -93,9 +87,8 @@ const RegisterScreen = ({ navigation }) => {
           />
 
           <Text style={styles.termsText}>
-            By signing up, you agree to our{' '}
-            <Text style={styles.termsLink}>Terms of Service</Text> and{' '}
-            <Text style={styles.termsLink}>Privacy Policy</Text>
+            By signing up, you agree to our <Text style={styles.termsLink}>Terms of Service</Text>{' '}
+            and <Text style={styles.termsLink}>Privacy Policy</Text>
           </Text>
 
           <View style={styles.loginContainer}>

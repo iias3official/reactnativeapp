@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  Dimensions,
-} from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Card from '../../components/Card';
 import { COLORS, FONT_SIZES, FONT_WEIGHTS, SPACING, SIZES, SHADOWS } from '../../theme';
@@ -39,7 +32,8 @@ const HoroscopeScreen = ({ navigation }) => {
   ];
 
   const horoscopeData = {
-    prediction: 'Today brings exciting opportunities in your career. Your natural leadership skills will shine through, and colleagues will look to you for guidance. In love, communication is key - express your feelings openly.',
+    prediction:
+      'Today brings exciting opportunities in your career. Your natural leadership skills will shine through, and colleagues will look to you for guidance. In love, communication is key - express your feelings openly.',
     love: 85,
     career: 92,
     health: 78,
@@ -52,14 +46,8 @@ const HoroscopeScreen = ({ navigation }) => {
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       {/* Header */}
-      <LinearGradient
-        colors={[COLORS.primary, COLORS.primaryLight]}
-        style={styles.header}
-      >
-        <TouchableOpacity
-          style={styles.backButton}
-          onPress={() => navigation.goBack()}
-        >
+      <LinearGradient colors={[COLORS.primary, COLORS.primaryLight]} style={styles.header}>
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
           <Text style={styles.backButtonText}>←</Text>
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Horoscope</Text>
@@ -143,9 +131,7 @@ const HoroscopeScreen = ({ navigation }) => {
             <Text style={styles.metricIcon}>❤️</Text>
             <Text style={styles.metricLabel}>Love</Text>
             <View style={styles.progressBar}>
-              <View
-                style={[styles.progressFill, { width: `${horoscopeData.love}%` }]}
-              />
+              <View style={[styles.progressFill, { width: `${horoscopeData.love}%` }]} />
             </View>
             <Text style={styles.metricValue}>{horoscopeData.love}%</Text>
           </Card>
@@ -154,9 +140,7 @@ const HoroscopeScreen = ({ navigation }) => {
             <Text style={styles.metricIcon}>💼</Text>
             <Text style={styles.metricLabel}>Career</Text>
             <View style={styles.progressBar}>
-              <View
-                style={[styles.progressFill, { width: `${horoscopeData.career}%` }]}
-              />
+              <View style={[styles.progressFill, { width: `${horoscopeData.career}%` }]} />
             </View>
             <Text style={styles.metricValue}>{horoscopeData.career}%</Text>
           </Card>
@@ -165,9 +149,7 @@ const HoroscopeScreen = ({ navigation }) => {
             <Text style={styles.metricIcon}>💪</Text>
             <Text style={styles.metricLabel}>Health</Text>
             <View style={styles.progressBar}>
-              <View
-                style={[styles.progressFill, { width: `${horoscopeData.health}%` }]}
-              />
+              <View style={[styles.progressFill, { width: `${horoscopeData.health}%` }]} />
             </View>
             <Text style={styles.metricValue}>{horoscopeData.health}%</Text>
           </Card>
@@ -176,9 +158,7 @@ const HoroscopeScreen = ({ navigation }) => {
             <Text style={styles.metricIcon}>💰</Text>
             <Text style={styles.metricLabel}>Finance</Text>
             <View style={styles.progressBar}>
-              <View
-                style={[styles.progressFill, { width: `${horoscopeData.finance}%` }]}
-              />
+              <View style={[styles.progressFill, { width: `${horoscopeData.finance}%` }]} />
             </View>
             <Text style={styles.metricValue}>{horoscopeData.finance}%</Text>
           </Card>

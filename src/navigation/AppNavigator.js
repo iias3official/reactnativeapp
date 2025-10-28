@@ -71,45 +71,35 @@ const TabNavigator = () => {
         name="HomeTab"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({ focused }) => (
-            <TabIcon icon="🏠" label="Home" focused={focused} />
-          ),
+          tabBarIcon: ({ focused }) => <TabIcon icon="🏠" label="Home" focused={focused} />,
         }}
       />
       <Tab.Screen
         name="AstrologersTab"
         component={AstrologerListScreen}
         options={{
-          tabBarIcon: ({ focused }) => (
-            <TabIcon icon="🔮" label="Astrologers" focused={focused} />
-          ),
+          tabBarIcon: ({ focused }) => <TabIcon icon="🔮" label="Astrologers" focused={focused} />,
         }}
       />
       <Tab.Screen
         name="ChatTab"
         component={ChatScreen}
         options={{
-          tabBarIcon: ({ focused }) => (
-            <TabIcon icon="💬" label="Chat" focused={focused} />
-          ),
+          tabBarIcon: ({ focused }) => <TabIcon icon="💬" label="Chat" focused={focused} />,
         }}
       />
       <Tab.Screen
         name="WalletTab"
         component={WalletScreen}
         options={{
-          tabBarIcon: ({ focused }) => (
-            <TabIcon icon="💰" label="Wallet" focused={focused} />
-          ),
+          tabBarIcon: ({ focused }) => <TabIcon icon="💰" label="Wallet" focused={focused} />,
         }}
       />
       <Tab.Screen
         name="ProfileTab"
         component={ProfileScreen}
         options={{
-          tabBarIcon: ({ focused }) => (
-            <TabIcon icon="👤" label="Profile" focused={focused} />
-          ),
+          tabBarIcon: ({ focused }) => <TabIcon icon="👤" label="Profile" focused={focused} />,
         }}
       />
     </Tab.Navigator>

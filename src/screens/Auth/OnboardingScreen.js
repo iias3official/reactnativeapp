@@ -1,12 +1,5 @@
 import React, { useRef, useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  Dimensions,
-  Animated,
-} from 'react-native';
+import { View, Text, StyleSheet, FlatList, Dimensions, Animated } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Button from '../../components/Button';
 import { COLORS, FONT_SIZES, FONT_WEIGHTS, SPACING, SIZES } from '../../theme';
@@ -97,10 +90,7 @@ const OnboardingScreen = ({ navigation }) => {
   );
 
   return (
-    <LinearGradient
-      colors={[COLORS.background, COLORS.secondary]}
-      style={styles.container}
-    >
+    <LinearGradient colors={[COLORS.background, COLORS.secondary]} style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.logo}>AstroWisdom</Text>
         {currentIndex < slides.length - 1 && (
@@ -134,7 +124,7 @@ const OnboardingScreen = ({ navigation }) => {
       <View style={styles.footer}>
         <Paginator />
         <Button
-          title={currentIndex === slides.length - 1 ? "Get Started" : "Next"}
+          title={currentIndex === slides.length - 1 ? 'Get Started' : 'Next'}
           onPress={scrollTo}
           variant="gradient"
           size="lg"

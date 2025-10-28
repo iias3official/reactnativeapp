@@ -43,27 +43,22 @@ const UserProfileSetupScreen = ({ navigation }) => {
     }, 1000);
   };
 
-  const isFormValid = profileData.dateOfBirth && profileData.timeOfBirth &&
-                      profileData.placeOfBirth && profileData.gender;
+  const isFormValid =
+    profileData.dateOfBirth &&
+    profileData.timeOfBirth &&
+    profileData.placeOfBirth &&
+    profileData.gender;
 
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
     >
-      <ScrollView
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
-        <LinearGradient
-          colors={[COLORS.primary, COLORS.primaryLight]}
-          style={styles.header}
-        >
+      <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+        <LinearGradient colors={[COLORS.primary, COLORS.primaryLight]} style={styles.header}>
           <Text style={styles.headerEmoji}>🌙</Text>
           <Text style={styles.headerTitle}>Complete Your Profile</Text>
-          <Text style={styles.headerSubtitle}>
-            Tell us about yourself for accurate predictions
-          </Text>
+          <Text style={styles.headerSubtitle}>Tell us about yourself for accurate predictions</Text>
         </LinearGradient>
 
         <View style={styles.formContainer}>

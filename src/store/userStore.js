@@ -6,9 +6,10 @@ const useUserStore = create((set) => ({
 
   setUser: (user) => set({ user, isAuthenticated: true }),
 
-  updateUser: (userData) => set((state) => ({
-    user: { ...state.user, ...userData },
-  })),
+  updateUser: (userData) =>
+    set((state) => ({
+      user: { ...state.user, ...userData },
+    })),
 
   logout: () => set({ user: null, isAuthenticated: false }),
 }));

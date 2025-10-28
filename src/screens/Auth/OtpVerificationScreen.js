@@ -1,11 +1,5 @@
 import React, { useState, useRef } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Button from '../../components/Button';
 import { COLORS, FONT_SIZES, FONT_WEIGHTS, SPACING, SIZES } from '../../theme';
@@ -52,15 +46,10 @@ const OtpVerificationScreen = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
-      <LinearGradient
-        colors={[COLORS.primary, COLORS.primaryLight]}
-        style={styles.header}
-      >
+      <LinearGradient colors={[COLORS.primary, COLORS.primaryLight]} style={styles.header}>
         <Text style={styles.headerEmoji}>📱</Text>
         <Text style={styles.headerTitle}>Enter OTP</Text>
-        <Text style={styles.headerSubtitle}>
-          We've sent a code to {phoneNumber}
-        </Text>
+        <Text style={styles.headerSubtitle}>We've sent a code to {phoneNumber}</Text>
       </LinearGradient>
 
       <View style={styles.content}>
@@ -69,10 +58,7 @@ const OtpVerificationScreen = ({ navigation, route }) => {
             <TextInput
               key={index}
               ref={(ref) => (inputRefs.current[index] = ref)}
-              style={[
-                styles.otpInput,
-                digit && styles.otpInputFilled,
-              ]}
+              style={[styles.otpInput, digit && styles.otpInputFilled]}
               value={digit}
               onChangeText={(value) => handleOtpChange(value, index)}
               onKeyPress={(e) => handleKeyPress(e, index)}
@@ -100,10 +86,7 @@ const OtpVerificationScreen = ({ navigation, route }) => {
           </TouchableOpacity>
         </View>
 
-        <TouchableOpacity
-          style={styles.changeNumberButton}
-          onPress={() => navigation.goBack()}
-        >
+        <TouchableOpacity style={styles.changeNumberButton} onPress={() => navigation.goBack()}>
           <Text style={styles.changeNumberText}>Change phone number</Text>
         </TouchableOpacity>
       </View>

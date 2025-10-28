@@ -40,7 +40,9 @@ const Button = ({
     <>
       {loading ? (
         <ActivityIndicator
-          color={variant === 'primary' || variant === 'gradient' ? COLORS.textWhite : COLORS.primary}
+          color={
+            variant === 'primary' || variant === 'gradient' ? COLORS.textWhite : COLORS.primary
+          }
         />
       ) : (
         <>
@@ -75,11 +77,7 @@ const Button = ({
           colors={[COLORS.gradientStart, COLORS.gradientEnd]}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
-          style={[
-            styles.button,
-            { height: getButtonHeight() },
-            disabled && styles.disabled,
-          ]}
+          style={[styles.button, { height: getButtonHeight() }, disabled && styles.disabled]}
         >
           {renderContent()}
         </LinearGradient>

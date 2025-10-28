@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  Dimensions,
-} from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Card from '../../components/Card';
 import { COLORS, FONT_SIZES, FONT_WEIGHTS, SPACING, SIZES, SHADOWS } from '../../theme';
@@ -61,10 +54,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       {/* Header with Greeting */}
-      <LinearGradient
-        colors={[COLORS.primary, COLORS.primaryLight]}
-        style={styles.header}
-      >
+      <LinearGradient colors={[COLORS.primary, COLORS.primaryLight]} style={styles.header}>
         <View style={styles.headerContent}>
           <View>
             <Text style={styles.greeting}>Hello, {userName}! 👋</Text>
@@ -98,7 +88,8 @@ const HomeScreen = ({ navigation }) => {
               </View>
             </View>
             <Text style={styles.horoscopeText}>
-              Today brings positive energy and opportunities. Trust your intuition and take bold steps towards your goals.
+              Today brings positive energy and opportunities. Trust your intuition and take bold
+              steps towards your goals.
             </Text>
             <TouchableOpacity
               style={styles.readMoreButton}
@@ -160,9 +151,7 @@ const HomeScreen = ({ navigation }) => {
               >
                 <View style={styles.astrologerHeader}>
                   <View style={styles.astrologerAvatar}>
-                    <Text style={styles.astrologerAvatarText}>
-                      {astrologer.name.charAt(0)}
-                    </Text>
+                    <Text style={styles.astrologerAvatarText}>{astrologer.name.charAt(0)}</Text>
                   </View>
                   <View
                     style={[

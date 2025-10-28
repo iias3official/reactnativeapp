@@ -2,13 +2,7 @@ import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { COLORS, SPACING, SIZES, SHADOWS } from '../theme';
 
-const Card = ({
-  children,
-  style,
-  onPress,
-  variant = 'default',
-  padding = SPACING.base,
-}) => {
+const Card = ({ children, style, onPress, variant = 'default', padding = SPACING.base }) => {
   const Container = onPress ? TouchableOpacity : View;
 
   return (

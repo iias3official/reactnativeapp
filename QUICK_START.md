@@ -3,6 +3,7 @@
 ## Run the App
 
 ### Option 1: Using npm
+
 ```bash
 # Start the development server
 npm start
@@ -20,6 +21,7 @@ npm run web        # For Web browser
    - [iOS - App Store](https://apps.apple.com/app/expo-go/id982107779)
 
 2. Start the server:
+
    ```bash
    npm start
    ```
@@ -39,12 +41,14 @@ npm run web        # For Web browser
 ## 🎨 Features to Test
 
 ### ✅ Authentication
+
 - Onboarding slides with smooth animations
 - Login with phone number
 - OTP verification (mock flow)
 - Profile setup with birth details
 
 ### ✅ Home Screen
+
 - Personalized greeting
 - Today's horoscope card with gradient
 - Quick action buttons
@@ -52,12 +56,14 @@ npm run web        # For Web browser
 - Quote of the day
 
 ### ✅ Horoscope
+
 - Daily/Weekly/Monthly toggle
 - Zodiac sign selection
 - Life aspects with progress bars
 - Lucky numbers and colors
 
 ### ✅ Astrologers
+
 - Search functionality
 - Category filters
 - Sort by rating/price/experience
@@ -65,6 +71,7 @@ npm run web        # For Web browser
 - Detailed profiles with reviews
 
 ### ✅ Navigation
+
 - Bottom tab navigation
 - Smooth transitions between screens
 - Back navigation
@@ -72,6 +79,7 @@ npm run web        # For Web browser
 ## 🎯 Test Credentials
 
 Since this is a demo without backend:
+
 - Any phone number works
 - OTP: Any 6 digits
 - All data is mock/static
@@ -79,12 +87,14 @@ Since this is a demo without backend:
 ## 🐛 Troubleshooting
 
 ### Port already in use
+
 ```bash
 # Kill the process on port 19000
 npx kill-port 19000
 ```
 
 ### Module not found
+
 ```bash
 npm install
 # Clear cache
@@ -92,18 +102,21 @@ npx expo start -c
 ```
 
 ### Expo Go not connecting
+
 1. Ensure phone and computer are on same WiFi
 2. Try using tunnel mode: `npx expo start --tunnel`
 
 ## 📝 Project Highlights
 
 ### Design System
+
 - **Primary**: Rose Pink (#FF66B2)
 - **Secondary**: White (#FFFFFF)
 - **Tertiary**: Black (#000000)
 - **Background**: Light Pink (#FFF5F8)
 
 ### Components
+
 - Reusable Button (4 variants)
 - Card component with shadows
 - Custom Input with validation
@@ -111,6 +124,7 @@ npx expo start -c
 - Smooth animations
 
 ### Screens
+
 - 5 Auth screens
 - 2 Home screens
 - 2 Astrologer screens

@@ -18,11 +18,13 @@ AstroWisdom is a comprehensive astrology consultation mobile application built w
 ### Technology Stack
 
 **Core Framework:**
+
 - React Native 0.81.5
 - React 19.1.0
 - Expo ~54.0.0
 
 **Navigation:**
+
 - @react-navigation/native ^6.1.9
 - @react-navigation/stack ^6.3.20
 - @react-navigation/bottom-tabs ^6.5.11
@@ -31,14 +33,17 @@ AstroWisdom is a comprehensive astrology consultation mobile application built w
 - react-native-safe-area-context ~5.6.0
 
 **State Management:**
+
 - Zustand ^4.4.0
 
 **UI/UX Libraries:**
+
 - expo-linear-gradient ~15.0.7
 - expo-status-bar ~3.0.8
 - expo-splash-screen ~31.0.10
 
 **Utilities:**
+
 - Axios ^1.6.0 (HTTP client)
 - expo-font ~14.0.9
 - expo-asset ~12.0.9
@@ -96,26 +101,31 @@ astrowisdom/
 ### Color Palette
 
 **Primary Colors:**
+
 - Primary: #FF66B2 (Rose Pink)
 - Primary Light: #FF99CC
 - Primary Dark: #FF3399
 
 **Secondary Colors:**
+
 - Secondary: #FFFFFF (White)
 - Tertiary: #000000 (Black)
 
 **Background Colors:**
+
 - Background: #FFF5F8 (Light Pink)
 - Card Background: #FFFFFF
 - Overlay: rgba(0, 0, 0, 0.5)
 
 **Text Colors:**
+
 - Primary Text: #1A1A1A
 - Secondary Text: #666666
 - Light Text: #999999
 - White Text: #FFFFFF
 
 **Status Colors:**
+
 - Success: #4CAF50 (Green)
 - Warning: #FFC107 (Amber)
 - Error: #F44336 (Red)
@@ -124,16 +134,19 @@ astrowisdom/
 - Offline: #999999
 
 **Border Colors:**
+
 - Border: #FFE6F0
 - Border Light: #FFF0F5
 
 **Gradient:**
+
 - Gradient Start: #FF66B2
 - Gradient End: #FF99CC
 
 ### Typography
 
 The app uses a comprehensive typography system with:
+
 - Font sizes ranging from xs (12px) to xxxl (36px)
 - Font weights: regular, medium, semibold, bold
 - Line heights for optimal readability
@@ -141,6 +154,7 @@ The app uses a comprehensive typography system with:
 ### Spacing & Sizing
 
 Consistent spacing scale:
+
 - xs, sm, base, md, lg, xl, xxl, xxxl, mega
 - Button sizes: small, medium, large
 - Border radius: xs, sm, md, lg, xl, full
@@ -148,6 +162,7 @@ Consistent spacing scale:
 ### Shadows
 
 Platform-specific shadow system (iOS & Android):
+
 - Small, medium, large shadows
 - Card-specific shadow styling
 
@@ -158,6 +173,7 @@ Platform-specific shadow system (iOS & Android):
 ### Navigation Type: Hybrid Stack + Bottom Tabs
 
 **Root Stack Navigator:**
+
 1. Authentication Flow (Stack)
    - Onboarding
    - Login
@@ -177,6 +193,7 @@ Platform-specific shadow system (iOS & Android):
    - Astrologer Profile
 
 **Tab Bar Configuration:**
+
 - Custom emoji-based icons
 - Active/inactive states with color changes
 - Labels below icons
@@ -188,7 +205,9 @@ Platform-specific shadow system (iOS & Android):
 ## 🔐 Authentication System
 
 ### State Management
+
 Uses Zustand store with the following functionality:
+
 - `user`: User object storage
 - `isAuthenticated`: Authentication status
 - `setUser`: Set user and mark as authenticated
@@ -198,6 +217,7 @@ Uses Zustand store with the following functionality:
 ### Authentication Flow Screens
 
 **1. OnboardingScreen** (src/screens/Auth/OnboardingScreen.js)
+
 - 3 animated slides with horizontal scrolling
 - Features:
   - Connect with Expert Astrologers
@@ -210,6 +230,7 @@ Uses Zustand store with the following functionality:
 - Uses FlatList for performance optimization
 
 **2. LoginScreen**
+
 - Phone/Email login option
 - Input validation
 - "Remember me" functionality
@@ -218,12 +239,14 @@ Uses Zustand store with the following functionality:
 - Navigate to Register screen
 
 **3. RegisterScreen**
+
 - New user registration
 - Multiple input fields
 - Terms & conditions acceptance
 - Navigate to OTP verification
 
 **4. OtpVerificationScreen**
+
 - 4/6 digit OTP input
 - Resend OTP functionality
 - Timer countdown
@@ -231,6 +254,7 @@ Uses Zustand store with the following functionality:
 - Navigate to profile setup
 
 **5. UserProfileSetupScreen**
+
 - Birth date, time, place input
 - Zodiac sign calculation
 - Profile photo upload
@@ -287,6 +311,7 @@ Uses Zustand store with the following functionality:
    - Card-based layout
 
 **UI Components:**
+
 - Gradient backgrounds
 - Shadow effects
 - Rounded corners
@@ -300,6 +325,7 @@ Uses Zustand store with the following functionality:
 ### HoroscopeScreen (src/screens/Home/HoroscopeScreen.js)
 
 **Features:**
+
 - Daily, Weekly, Monthly predictions
 - Zodiac sign selection/switching
 - Life aspects tabs:
@@ -371,6 +397,7 @@ Uses Zustand store with the following functionality:
    - Shadow and border styling
 
 **Data Structure (Astrologer):**
+
 - id, name, expertise
 - rating, reviews, experience
 - price (per minute)
@@ -381,6 +408,7 @@ Uses Zustand store with the following functionality:
 ### AstrologerProfileScreen (src/screens/Astrologer/AstrologerProfileScreen.js)
 
 **Features:**
+
 - Detailed astrologer information
 - Profile photo/avatar
 - About section
@@ -412,6 +440,7 @@ Uses Zustand store with the following functionality:
 ### Button Component (src/components/Button.js)
 
 **Props:**
+
 - `title`: Button text
 - `onPress`: Click handler
 - `variant`: primary | secondary | outline | gradient
@@ -423,6 +452,7 @@ Uses Zustand store with the following functionality:
 - `textStyle`: Custom text styles
 
 **Features:**
+
 - Multiple variants with different styling
 - Size-based dimensions and font sizes
 - Loading spinner integration
@@ -434,6 +464,7 @@ Uses Zustand store with the following functionality:
 ### Card Component (src/components/Card.js)
 
 **Props:**
+
 - `children`: Content inside card
 - `style`: Custom styles
 - `onPress`: Optional press handler (makes it touchable)
@@ -441,6 +472,7 @@ Uses Zustand store with the following functionality:
 - `padding`: Custom padding value
 
 **Features:**
+
 - Conditional TouchableOpacity or View wrapper
 - Multiple style variants
 - Shadow effects
@@ -451,6 +483,7 @@ Uses Zustand store with the following functionality:
 ### Input Component (src/components/Input.js)
 
 **Expected Props:**
+
 - Label text
 - Placeholder
 - Value
@@ -471,6 +504,7 @@ Uses Zustand store with the following functionality:
 **Technology:** Zustand
 
 **State:**
+
 ```javascript
 {
   user: null,              // User object
@@ -479,11 +513,13 @@ Uses Zustand store with the following functionality:
 ```
 
 **Actions:**
+
 - `setUser(user)`: Set user data and mark authenticated
 - `updateUser(userData)`: Merge update to existing user data
 - `logout()`: Clear user and mark unauthenticated
 
 **Usage Pattern:**
+
 - Import: `import useUserStore from '../store/userStore'`
 - Access: `const { user, setUser } = useUserStore()`
 - No providers needed (Zustand auto-manages)
@@ -628,6 +664,7 @@ Uses Zustand store with the following functionality:
 ### Total Screens Count: 13
 
 **Implemented:** 7
+
 - OnboardingScreen
 - LoginScreen
 - RegisterScreen
@@ -639,6 +676,7 @@ Uses Zustand store with the following functionality:
 - AstrologerProfileScreen
 
 **Placeholder/Coming Soon:** 3
+
 - ChatScreen
 - WalletScreen
 - ProfileScreen
@@ -694,6 +732,7 @@ Uses Zustand store with the following functionality:
 ## 🔧 Configuration Files
 
 ### app.json (Expo Configuration)
+
 - App Name: AstroWisdom
 - Slug: astrowisdom
 - Version: 1.0.0
@@ -707,6 +746,7 @@ Uses Zustand store with the following functionality:
 - Plugins: expo-asset, expo-font
 
 ### package.json Scripts
+
 - `start`: Start Expo development server
 - `android`: Run on Android
 - `ios`: Run on iOS
@@ -719,6 +759,7 @@ Uses Zustand store with the following functionality:
 ### Expected API Endpoints:
 
 **Authentication:**
+
 - POST /auth/register
 - POST /auth/login
 - POST /auth/verify-otp
@@ -726,29 +767,34 @@ Uses Zustand store with the following functionality:
 - POST /auth/refresh-token
 
 **User:**
+
 - GET /user/profile
 - PUT /user/profile
 - GET /user/horoscope
 - GET /user/consultations
 
 **Astrologers:**
+
 - GET /astrologers (with filters, search, pagination)
 - GET /astrologers/:id
 - GET /astrologers/:id/reviews
 - POST /astrologers/:id/favorite
 
 **Chat:**
+
 - POST /chat/initiate
 - GET /chat/conversations
 - GET /chat/:conversationId/messages
 - POST /chat/:conversationId/message
 
 **Calls:**
+
 - POST /call/initiate
 - GET /call/token
 - POST /call/end
 
 **Payments:**
+
 - POST /payment/create
 - POST /payment/verify
 - GET /wallet/balance
@@ -756,6 +802,7 @@ Uses Zustand store with the following functionality:
 - GET /transactions
 
 **Horoscope:**
+
 - GET /horoscope/daily/:zodiacSign
 - GET /horoscope/weekly/:zodiacSign
 - GET /horoscope/monthly/:zodiacSign
@@ -780,6 +827,7 @@ Uses Zustand store with the following functionality:
 ## 🔒 Security Considerations
 
 ### To Be Implemented:
+
 - Secure token storage (encrypted)
 - API request signing
 - SSL certificate pinning
@@ -795,12 +843,14 @@ Uses Zustand store with the following functionality:
 ## 📈 Performance Considerations
 
 ### Current Optimizations:
+
 - FlatList for long lists (virtualization)
 - useRef for non-reactive values
 - Animated.event with native driver where possible
 - Image optimization pending
 
 ### Future Optimizations:
+
 - React.memo for expensive components
 - useMemo/useCallback for heavy computations
 - Code splitting
@@ -813,6 +863,7 @@ Uses Zustand store with the following functionality:
 ## 🎯 Development Guidelines
 
 ### Code Style:
+
 - Functional components with hooks
 - Arrow functions
 - StyleSheet.create for styles
@@ -821,6 +872,7 @@ Uses Zustand store with the following functionality:
 - Modular component structure
 
 ### Best Practices:
+
 - Single responsibility principle
 - Reusable components in src/components/
 - Screen-specific components in screen files
@@ -833,6 +885,7 @@ Uses Zustand store with the following functionality:
 ## 📝 Maintenance Notes
 
 ### Regular Tasks:
+
 - Update dependencies monthly
 - Test on latest iOS/Android versions
 - Review and update documentation
@@ -842,6 +895,7 @@ Uses Zustand store with the following functionality:
 - Review user feedback
 
 ### Before Production:
+
 - Remove all console.logs
 - Enable production mode
 - Set up error tracking (Sentry)
@@ -857,6 +911,7 @@ Uses Zustand store with the following functionality:
 ## 📞 Support & Contact
 
 ### For Development Issues:
+
 - Check README.md
 - Check QUICK_START.md
 - Review this documentation
